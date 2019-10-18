@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,7 +106,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,7 +124,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +136,54 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\external\glad\src\glad.c" />
+    <ClCompile Include="core\assert.cpp" />
+    <ClCompile Include="core\filesystem.cpp" />
+    <ClCompile Include="core\heap.cpp" />
+    <ClCompile Include="core\json.cpp" />
+    <ClCompile Include="core\memory.cpp" />
+    <ClCompile Include="core\name.cpp" />
+    <ClCompile Include="core\random.cpp" />
+    <ClCompile Include="core\string.cpp" />
+    <ClCompile Include="core\timer.cpp" />
+    <ClCompile Include="engine\input\input.cpp" />
+    <ClCompile Include="engine\renderer\program.cpp" />
+    <ClCompile Include="engine\renderer\renderer.cpp" />
+    <ClCompile Include="engine\renderer\texture.cpp" />
+    <ClCompile Include="engine\renderer\vertex_array.cpp" />
+    <ClCompile Include="engine\renderer\vertex_index_array.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\assert.h" />
+    <ClInclude Include="core\core.h" />
+    <ClInclude Include="core\filesystem.h" />
+    <ClInclude Include="core\handle.h" />
+    <ClInclude Include="core\heap.h" />
+    <ClInclude Include="core\json.h" />
+    <ClInclude Include="core\memory.h" />
+    <ClInclude Include="core\name.h" />
+    <ClInclude Include="core\pool_allocator.h" />
+    <ClInclude Include="core\random.h" />
+    <ClInclude Include="core\reflection.h" />
+    <ClInclude Include="core\ref_count.h" />
+    <ClInclude Include="core\ref_ptr.h" />
+    <ClInclude Include="core\smart_ptr.h" />
+    <ClInclude Include="core\string.h" />
+    <ClInclude Include="core\timer.h" />
+    <ClInclude Include="core\types.h" />
+    <ClInclude Include="engine\engine.h" />
+    <ClInclude Include="engine\input\input.h" />
+    <ClInclude Include="engine\renderer\program.h" />
+    <ClInclude Include="engine\renderer\renderer.h" />
+    <ClInclude Include="engine\renderer\texture.h" />
+    <ClInclude Include="engine\renderer\vertex_array.h" />
+    <ClInclude Include="engine\renderer\vertex_index_array.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="builds\content\shaders\basic.frag" />
+    <None Include="builds\content\shaders\basic.vert" />
+    <None Include="builds\content\shaders\texture.frag" />
+    <None Include="builds\content\shaders\texture.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

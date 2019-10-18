@@ -1,2 +1,13 @@
-﻿  main.cpp
-  gat350.vcxproj -> C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\Debug\gat350.exe
+﻿  glad.c
+  assert.cpp
+  filesystem.cpp
+  heap.cpp
+  json.cpp
+  memory.cpp
+  name.cpp
+  random.cpp
+  string.cpp
+  timer.cpp
+  main.cpp
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.23.28105\include\experimental\filesystem(26,1): fatal error C1189: #error:  The <experimental/filesystem> header providing std::experimental::filesystem is deprecated by Microsoft and will be REMOVED. It is superseded by the C++17 <filesystem> header providing std::filesystem. You can define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING to acknowledge that you have received this warning.
