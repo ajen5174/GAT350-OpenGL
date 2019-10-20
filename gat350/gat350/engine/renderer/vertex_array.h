@@ -7,6 +7,7 @@ public:
 	enum eAttrib
 	{
 		POSITION = 0,
+		NORMAL,
 		COLOR,
 		TEXCOORD,
 		MULTI

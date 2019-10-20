@@ -155,10 +155,16 @@
     <None Include="builds\content\shaders\basic.vert">
       <Filter>shaders</Filter>
     </None>
-    <None Include="builds\content\shaders\texture.frag">
+    <None Include="builds\content\shaders\texture_unlit.frag">
       <Filter>shaders</Filter>
     </None>
-    <None Include="builds\content\shaders\texture.vert">
+    <None Include="builds\content\shaders\texture_unlit.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\basic_lit.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\basic_lit.vert">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
