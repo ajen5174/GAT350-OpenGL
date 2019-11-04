@@ -1,2 +1,7 @@
 ﻿  main.cpp
+C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\gat350\main.cpp(147,49): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\gat350\main.cpp(147,49): warning C4305:         with
+C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\gat350\main.cpp(147,49): warning C4305:         [
+C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\gat350\main.cpp(147,49): warning C4305:             T=float
+C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\gat350\main.cpp(147,49): warning C4305:         ]
   gat350.vcxproj -> C:\Users\Student\OneDrive - Neumont College of Computer Science\FALL 2019 Q5\Computer Graphics\GAT350\GAT350-OpenGL\gat350\x64\Debug\gat350.exe

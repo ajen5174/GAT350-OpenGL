@@ -13,6 +13,9 @@ public:
 	void ClearBuffer();
 	void SwapBuffer();
 
+	SDL_Window* GetWindow() { return m_window; }
+	SDL_GLContext GetContext() { return m_context; }
+
 private:
 	SDL_Window* m_window = nullptr;
 	SDL_GLContext m_context;

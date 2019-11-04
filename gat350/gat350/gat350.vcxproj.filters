@@ -20,12 +20,15 @@
     <Filter Include="source\engine\input">
       <UniqueIdentifier>{75055f55-cc59-4b6c-b451-4a1fcc5dd78d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\engine\math">
+      <UniqueIdentifier>{6480e8c8-0b74-45a5-96f7-1db6341e4b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{e7e74d3d-c242-4ecf-b8be-cbd2e4f20688}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\external\glad\src\glad.c">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="core\assert.cpp">
@@ -71,6 +74,39 @@
       <Filter>source\engine\renderer</Filter>
     </ClCompile>
     <ClCompile Include="engine\renderer\texture.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\light.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\material.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\mesh.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\math\math.cpp">
+      <Filter>source\engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\glad\src\glad.c">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui.cpp">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_draw.cpp">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_widgets.cpp">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\examples\imgui_impl_opengl3.cpp">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\examples\imgui_impl_sdl.cpp">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\gui.cpp">
       <Filter>source\engine\renderer</Filter>
     </ClCompile>
   </ItemGroup>
@@ -147,6 +183,21 @@
     <ClInclude Include="engine\renderer\texture.h">
       <Filter>source\engine\renderer</Filter>
     </ClInclude>
+    <ClInclude Include="engine\renderer\light.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\material.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\mesh.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\math\math.h">
+      <Filter>source\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\gui.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag">
@@ -165,6 +216,30 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="builds\content\shaders\basic_lit.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\gouraud.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\gouraud.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\phong.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\phong.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\toon.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_fog.frag">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
