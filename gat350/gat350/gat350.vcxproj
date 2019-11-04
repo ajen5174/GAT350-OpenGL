@@ -152,6 +152,7 @@
     <ClCompile Include="core\timer.cpp" />
     <ClCompile Include="engine\input\input.cpp" />
     <ClCompile Include="engine\math\math.cpp" />
+    <ClCompile Include="engine\math\transform.cpp" />
     <ClCompile Include="engine\renderer\gui.cpp" />
     <ClCompile Include="engine\renderer\light.cpp" />
     <ClCompile Include="engine\renderer\material.cpp" />
@@ -182,8 +183,14 @@
     <ClInclude Include="core\timer.h" />
     <ClInclude Include="core\types.h" />
     <ClInclude Include="engine\engine.h" />
+    <ClInclude Include="engine\framework\actor.h" />
+    <ClInclude Include="engine\framework\object.h" />
+    <ClInclude Include="engine\framework\resource.h" />
+    <ClInclude Include="engine\framework\scene.h" />
+    <ClInclude Include="engine\framework\system.h" />
     <ClInclude Include="engine\input\input.h" />
     <ClInclude Include="engine\math\math.h" />
+    <ClInclude Include="engine\math\transform.h" />
     <ClInclude Include="engine\renderer\gui.h" />
     <ClInclude Include="engine\renderer\light.h" />
     <ClInclude Include="engine\renderer\material.h" />

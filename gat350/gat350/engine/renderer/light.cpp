@@ -10,7 +10,7 @@ void Light::SetShader(class Program* program, const glm::mat4& view)
 	program->SetUniform("light.ambient", ambient);
 	program->SetUniform("light.diffuse", diffuse);
 	program->SetUniform("light.specular", specular);
-	program->SetUniform("light.position", position * view);
+	program->SetUniform("light.position", glm::vec4(m_transform.translation, 1.0f) * view);
 }
 
 void Light::Edit()
@@ -20,6 +20,6 @@ void Light::Edit()
 	ImGui::ColorEdit3("Ambient", (float*)(&ambient));
 	ImGui::ColorEdit3("Diffuse", (float*)(&diffuse));
 	ImGui::ColorEdit3("Specular", (float*)(&specular));
-	ImGui::SliderFloat4("position", (float*)(&position), -100.0f, 100.0f);
+	ImGui::SliderFloat4("position", (float*)(&m_transform.translation), -100.0f, 100.0f);
 	ImGui::PopID();
 }

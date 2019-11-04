@@ -15,6 +15,8 @@
 
 int main(int argc, char** argv)
 {
+	Name::AllocNames();
+
 	filesystem::set_current_path("content");
 
 
@@ -36,6 +38,7 @@ int main(int argc, char** argv)
 	std::vector<glm::vec3> normals;
 	std::vector<glm::vec2> texcoords;
 	Mesh::Load("meshes/suzanne.obj", positions, normals, texcoords);
+	Transform transform;
 
 	if (normals.empty())
 	{
@@ -88,15 +91,13 @@ int main(int argc, char** argv)
 	material.SetShader(shader);
 	material.Use();
 
-	Light light;
-	light.position = glm::vec4(5.0f, 2.0f, 5.0f, 1.0f);
+	Light light("light");
+	light.GetTransform().translation = glm::vec3(5.0f);
 	light.ambient = glm::vec3(0.1f);
 	light.diffuse = glm::vec3(1.0f);
 	light.specular = glm::vec3(1.0f);
 
 
-	glm::mat4 mxTranslate = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -5.0f));
-	glm::mat4 mxRotate = glm::rotate(glm::mat4(1.0f), 0.0f, glm::vec3(0.0f, 1.0f, 0.0f));
 	glm::mat4 mxProjection = glm::perspective(glm::radians(45.0f), 1280.0f / 720.0f, 0.01f, 1000.0f);
 	glm::mat4 mxView = glm::lookAt(glm::vec3(0.0f, 0.0f, 5.0f), glm::vec3(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
@@ -131,12 +132,10 @@ int main(int argc, char** argv)
 		if (input->GetKey(SDL_SCANCODE_W))	translate.z = speed;
 		if (input->GetKey(SDL_SCANCODE_S))	translate.z = -speed;
 
+		transform.translation = transform.translation + translate * g_timer.dt();
+		transform.rotation = transform.rotation * glm::angleAxis(glm::radians(45.0f) * g_timer.dt(), glm::vec3(0.0f, 1.0f, 0.0f));
 
-		mxTranslate = glm::translate(mxTranslate, translate * g_timer.dt());
-		mxRotate = glm::rotate(mxRotate, glm::radians(45.0f) * g_timer.dt(), glm::vec3(0.0f, 1.0f, 0.0f));
-		glm::mat4 mxModel = mxTranslate * mxRotate;
-
-		glm::mat4 model_view_matrix = mxView * mxModel;
+		glm::mat4 model_view_matrix = mxView * transform.GetMatrix();
 		glm::mat4 mvp_matrix = mxProjection *  model_view_matrix;
 
 		shader->SetUniform("model_view_matrix", model_view_matrix);

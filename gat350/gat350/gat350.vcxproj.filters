@@ -26,6 +26,9 @@
     <Filter Include="external">
       <UniqueIdentifier>{e7e74d3d-c242-4ecf-b8be-cbd2e4f20688}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\engine\framework">
+      <UniqueIdentifier>{644f37b4-40c2-400f-85f5-1fcd9aa29818}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -108,6 +111,9 @@
     </ClCompile>
     <ClCompile Include="engine\renderer\gui.cpp">
       <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\math\transform.cpp">
+      <Filter>source\engine\math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +203,24 @@
     </ClInclude>
     <ClInclude Include="engine\renderer\gui.h">
       <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\math\transform.h">
+      <Filter>source\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\framework\resource.h">
+      <Filter>source\engine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\framework\scene.h">
+      <Filter>source\engine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\framework\system.h">
+      <Filter>source\engine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\framework\actor.h">
+      <Filter>source\engine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\framework\object.h">
+      <Filter>source\engine\framework</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
