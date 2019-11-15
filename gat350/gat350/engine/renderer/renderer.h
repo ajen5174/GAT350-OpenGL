@@ -1,14 +1,17 @@
 #pragma once
-#include "../engine.h"
+#include "../framework/system.h"
 
-class Renderer
+class Renderer : public System
 {
 public:
-	Renderer() {}
+	OBJECT_DECLARATION(Renderer, System)
+
 	~Renderer() {}
 
+	bool Initialize();
 	bool Initialize(u32 width, u32 height, bool fullscreen = false);
 	void Shutdown();
+	void Update();
 	
 	void ClearBuffer();
 	void SwapBuffer();

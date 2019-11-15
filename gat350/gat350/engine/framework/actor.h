@@ -6,10 +6,14 @@ class Actor : public Object
 {
 public:
 	OBJECT_DECLARATION(Actor, Object)
-
 	virtual ~Actor() {}
 
-	Transform& GetTransform() { return m_transform; }
+
+
+	virtual void Update() {}
+	virtual void Draw(GLenum primitiveType = GL_TRIANGLES) {}
+
+	
 
 	virtual void Edit()
 	{ 
@@ -17,6 +21,7 @@ public:
 		m_transform.Edit(); 
 	}
 
-protected:
+public:
 	Transform m_transform;
+	class Scene* m_scene = nullptr;
 };

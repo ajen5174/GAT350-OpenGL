@@ -1,12 +1,6 @@
 #include "material.h"
 
-void Material::Destroy()
-{
-	for (Texture* texture : textures)
-	{
-		delete texture;
-	}
-}
+
 
 void Material::SetShader(Program* shader)
 {
@@ -31,7 +25,7 @@ void Material::Edit()
 
 void Material::Use()
 {
-	for (Texture* texture : textures)
+	for (const auto& texture : textures)
 	{
 		texture->Bind();
 	}

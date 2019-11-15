@@ -1,12 +1,14 @@
 #pragma once
-#include "../engine.h"
+#include "../framework/resource.h"
 
-class Texture
+class Texture : public Resource
 {
 public:
-	Texture() {}
+	OBJECT_DECLARATION(Texture, Resource)
+
 	~Texture();
 
+	bool Create(const Name& name) override;
 	void CreateTexture(const std::string& filename, GLenum type = GL_TEXTURE_2D, GLuint unit = GL_TEXTURE0);
 	void Bind();
 

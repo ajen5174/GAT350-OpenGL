@@ -1,9 +1,11 @@
 #pragma once
-#include "../engine.h"
+#include "../def.h"
+#include "object.h"
 
-class System
+class System : public Object
 {
 public:
+	OBJECT_DECLARATION(System, Object)
 	virtual ~System() {}
 
 	virtual bool Initialize() = 0;

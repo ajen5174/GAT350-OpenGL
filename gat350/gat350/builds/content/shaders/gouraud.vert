@@ -3,7 +3,7 @@
 layout (location = 0) in vec3 vposition;
 layout (location = 1) in vec3 vnormal;
 
-out vec3 fcolor;
+flat out vec3 fcolor;
 
 struct material_s
 {

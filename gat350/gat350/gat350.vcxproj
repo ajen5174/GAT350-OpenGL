@@ -150,19 +150,24 @@
     <ClCompile Include="core\random.cpp" />
     <ClCompile Include="core\string.cpp" />
     <ClCompile Include="core\timer.cpp" />
+    <ClCompile Include="engine\engine.cpp" />
+    <ClCompile Include="engine\framework\scene.cpp" />
     <ClCompile Include="engine\input\input.cpp" />
     <ClCompile Include="engine\math\math.cpp" />
     <ClCompile Include="engine\math\transform.cpp" />
+    <ClCompile Include="engine\renderer\camera.cpp" />
     <ClCompile Include="engine\renderer\gui.cpp" />
     <ClCompile Include="engine\renderer\light.cpp" />
     <ClCompile Include="engine\renderer\material.cpp" />
     <ClCompile Include="engine\renderer\mesh.cpp" />
+    <ClCompile Include="engine\renderer\model.cpp" />
     <ClCompile Include="engine\renderer\program.cpp" />
     <ClCompile Include="engine\renderer\renderer.cpp" />
     <ClCompile Include="engine\renderer\texture.cpp" />
     <ClCompile Include="engine\renderer\vertex_array.cpp" />
     <ClCompile Include="engine\renderer\vertex_index_array.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="game\game_scene.cpp" />
+    <ClCompile Include="game\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
@@ -182,6 +187,7 @@
     <ClInclude Include="core\string.h" />
     <ClInclude Include="core\timer.h" />
     <ClInclude Include="core\types.h" />
+    <ClInclude Include="engine\def.h" />
     <ClInclude Include="engine\engine.h" />
     <ClInclude Include="engine\framework\actor.h" />
     <ClInclude Include="engine\framework\object.h" />
@@ -191,19 +197,25 @@
     <ClInclude Include="engine\input\input.h" />
     <ClInclude Include="engine\math\math.h" />
     <ClInclude Include="engine\math\transform.h" />
+    <ClInclude Include="engine\renderer\camera.h" />
     <ClInclude Include="engine\renderer\gui.h" />
     <ClInclude Include="engine\renderer\light.h" />
     <ClInclude Include="engine\renderer\material.h" />
     <ClInclude Include="engine\renderer\mesh.h" />
+    <ClInclude Include="engine\renderer\model.h" />
     <ClInclude Include="engine\renderer\program.h" />
     <ClInclude Include="engine\renderer\renderer.h" />
     <ClInclude Include="engine\renderer\texture.h" />
     <ClInclude Include="engine\renderer\vertex_array.h" />
     <ClInclude Include="engine\renderer\vertex_index_array.h" />
+    <ClInclude Include="framework\factory.h" />
+    <ClInclude Include="framework\object_manager.h" />
+    <ClInclude Include="game\game_scene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag" />
     <None Include="builds\content\shaders\basic.vert" />
+    <None Include="builds\content\shaders\basic_color.vert" />
     <None Include="builds\content\shaders\basic_lit.frag" />
     <None Include="builds\content\shaders\basic_lit.vert" />
     <None Include="builds\content\shaders\gouraud.frag" />
@@ -213,6 +225,9 @@
     <None Include="builds\content\shaders\texture_phong.frag" />
     <None Include="builds\content\shaders\texture_phong.vert" />
     <None Include="builds\content\shaders\texture_phong_fog.frag" />
+    <None Include="builds\content\shaders\texture_phong_fx.frag" />
+    <None Include="builds\content\shaders\texture_phong_fx.vert" />
+    <None Include="builds\content\shaders\texture_phong_specular.frag" />
     <None Include="builds\content\shaders\texture_unlit.frag" />
     <None Include="builds\content\shaders\texture_unlit.vert" />
     <None Include="builds\content\shaders\toon.frag" />

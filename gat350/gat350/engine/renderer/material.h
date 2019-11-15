@@ -1,12 +1,13 @@
 #pragma once
-#include "../engine.h"
+#include "../framework/resource.h"
 #include "texture.h"
 #include "program.h"
 
-class Material
+class Material : public Resource
 {
 public:
-	void Destroy();
+	OBJECT_DECLARATION(Material, Resource)
+		virtual ~Material() {}
 
 	void SetShader(Program* shader);
 	void Use();
@@ -19,5 +20,5 @@ public:
 	glm::vec3 specular = glm::vec3(1.0f);
 	float shininess = 100.0f;
 	
-	std::vector<Texture*> textures;
+	std::vector<std::shared_ptr<Texture>> textures;
 };

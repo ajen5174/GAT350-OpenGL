@@ -29,11 +29,14 @@
     <Filter Include="source\engine\framework">
       <UniqueIdentifier>{644f37b4-40c2-400f-85f5-1fcd9aa29818}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\game">
+      <UniqueIdentifier>{bd8f4f2d-149c-41e3-b91d-67c5e3629f8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework">
+      <UniqueIdentifier>{4f7a9882-84a2-49c3-bad0-6c1fe8e9a9a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="core\assert.cpp">
       <Filter>source\core</Filter>
     </ClCompile>
@@ -114,6 +117,24 @@
     </ClCompile>
     <ClCompile Include="engine\math\transform.cpp">
       <Filter>source\engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="game\main.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\engine.cpp">
+      <Filter>source\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\camera.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\model.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\framework\scene.cpp">
+      <Filter>source\engine\framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +243,24 @@
     <ClInclude Include="engine\framework\object.h">
       <Filter>source\engine\framework</Filter>
     </ClInclude>
+    <ClInclude Include="framework\factory.h">
+      <Filter>source\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\object_manager.h">
+      <Filter>source\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\def.h">
+      <Filter>source\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="game\game_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\camera.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\model.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag">
@@ -264,6 +303,18 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="builds\content\shaders\texture_phong_fog.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_specular.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\basic_color.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_fx.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_fx.frag">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
