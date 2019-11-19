@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;$(SolutionDir)external\imgui;$(SolutionDir)external\imgui\examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;$(SolutionDir)external\imgui;$(SolutionDir)external\imgui\examples;$(SolutionDir)external\imgui\imGuiZMO.quat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;$(SolutionDir)external\imgui;$(SolutionDir)external\imgui\examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\glad\include;$(SolutionDir)external\SDL2-2.0.10\include;$(SolutionDir)external\glm;$(SolutionDir)external\rapidjson;$(SolutionDir)external;$(SolutionDir)external\imgui;$(SolutionDir)external\imgui\examples;$(SolutionDir)external\imgui\imGuiZMO.quat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +139,7 @@
     <ClCompile Include="..\external\imgui\examples\imgui_impl_opengl3.cpp" />
     <ClCompile Include="..\external\imgui\examples\imgui_impl_sdl.cpp" />
     <ClCompile Include="..\external\imgui\imgui.cpp" />
+    <ClCompile Include="..\external\imgui\imGuIZMO.quat\imGuIZMOquat.cpp" />
     <ClCompile Include="..\external\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="core\assert.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="core\random.cpp" />
     <ClCompile Include="core\string.cpp" />
     <ClCompile Include="core\timer.cpp" />
+    <ClCompile Include="engine\editor\editor.cpp" />
     <ClCompile Include="engine\engine.cpp" />
     <ClCompile Include="engine\framework\scene.cpp" />
     <ClCompile Include="engine\input\input.cpp" />
@@ -166,7 +168,7 @@
     <ClCompile Include="engine\renderer\texture.cpp" />
     <ClCompile Include="engine\renderer\vertex_array.cpp" />
     <ClCompile Include="engine\renderer\vertex_index_array.cpp" />
-    <ClCompile Include="game\game_scene.cpp" />
+    <ClCompile Include="game\light_scene.cpp" />
     <ClCompile Include="game\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +190,7 @@
     <ClInclude Include="core\timer.h" />
     <ClInclude Include="core\types.h" />
     <ClInclude Include="engine\def.h" />
+    <ClInclude Include="engine\editor\editor.h" />
     <ClInclude Include="engine\engine.h" />
     <ClInclude Include="engine\framework\actor.h" />
     <ClInclude Include="engine\framework\object.h" />
@@ -210,7 +213,7 @@
     <ClInclude Include="engine\renderer\vertex_index_array.h" />
     <ClInclude Include="framework\factory.h" />
     <ClInclude Include="framework\object_manager.h" />
-    <ClInclude Include="game\game_scene.h" />
+    <ClInclude Include="game\light_scene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag" />
@@ -227,6 +230,7 @@
     <None Include="builds\content\shaders\texture_phong_fog.frag" />
     <None Include="builds\content\shaders\texture_phong_fx.frag" />
     <None Include="builds\content\shaders\texture_phong_fx.vert" />
+    <None Include="builds\content\shaders\texture_phong_light.frag" />
     <None Include="builds\content\shaders\texture_phong_specular.frag" />
     <None Include="builds\content\shaders\texture_unlit.frag" />
     <None Include="builds\content\shaders\texture_unlit.vert" />

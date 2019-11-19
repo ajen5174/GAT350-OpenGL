@@ -3,6 +3,7 @@
 #include <sdl.h>
 #include <glad/glad.h>
 #include <imgui.h>
+#include <imGuIZMOquat.h>
 
 #include <string>
 #include <map>

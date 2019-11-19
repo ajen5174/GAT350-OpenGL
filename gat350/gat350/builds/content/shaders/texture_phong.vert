@@ -8,25 +8,7 @@ out vec3 fposition;
 out vec3 fnormal;
 out vec2 ftexcoord;
 
-struct material_s
-{
-	vec3 ambient;
-	vec3 diffuse;
-	vec3 specular;
-	float shininess; 
-};
 
-uniform material_s material;
-
-struct light_s
-{
-	vec4 position;
-	vec3 ambient;
-	vec3 diffuse;
-	vec3 specular;
-};
-
-uniform light_s light;
 
 uniform mat4 mvp_matrix;
 uniform mat4 model_view_matrix;

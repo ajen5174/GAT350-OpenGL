@@ -17,7 +17,10 @@ public:
 
 	virtual bool Create(const Name& name) { m_name = name; return true; }
 	 
-	inline virtual void Edit() { ImGui::Text(m_name.c_str()); }
+	inline virtual void Edit() 
+	{
+		ImGui::Text("Name: %s", m_name.c_str());
+	}
 
 public:
 	Name m_name;

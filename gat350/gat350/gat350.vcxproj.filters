@@ -35,6 +35,9 @@
     <Filter Include="source\framework">
       <UniqueIdentifier>{4f7a9882-84a2-49c3-bad0-6c1fe8e9a9a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\engine\editor">
+      <UniqueIdentifier>{5b58e69c-80bc-4060-9880-7a873641f76c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\assert.cpp">
@@ -121,9 +124,6 @@
     <ClCompile Include="game\main.cpp">
       <Filter>source\game</Filter>
     </ClCompile>
-    <ClCompile Include="game\game_scene.cpp">
-      <Filter>source\game</Filter>
-    </ClCompile>
     <ClCompile Include="engine\engine.cpp">
       <Filter>source\engine</Filter>
     </ClCompile>
@@ -135,6 +135,15 @@
     </ClCompile>
     <ClCompile Include="engine\framework\scene.cpp">
       <Filter>source\engine\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="game\light_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\editor\editor.cpp">
+      <Filter>source\engine\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imGuIZMO.quat\imGuIZMOquat.cpp">
+      <Filter>external</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -252,14 +261,17 @@
     <ClInclude Include="engine\def.h">
       <Filter>source\engine</Filter>
     </ClInclude>
-    <ClInclude Include="game\game_scene.h">
-      <Filter>source\game</Filter>
-    </ClInclude>
     <ClInclude Include="engine\renderer\camera.h">
       <Filter>source\engine\renderer</Filter>
     </ClInclude>
     <ClInclude Include="engine\renderer\model.h">
       <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="game\light_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\editor\editor.h">
+      <Filter>source\engine\editor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -315,6 +327,9 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="builds\content\shaders\texture_phong_fx.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_light.frag">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
