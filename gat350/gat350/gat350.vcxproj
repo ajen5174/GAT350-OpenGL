@@ -168,8 +168,11 @@
     <ClCompile Include="engine\renderer\texture.cpp" />
     <ClCompile Include="engine\renderer\vertex_array.cpp" />
     <ClCompile Include="engine\renderer\vertex_index_array.cpp" />
+    <ClCompile Include="game\bump_scene.cpp" />
+    <ClCompile Include="game\fx_scene.cpp" />
     <ClCompile Include="game\light_scene.cpp" />
     <ClCompile Include="game\main.cpp" />
+    <ClCompile Include="game\multi_light_scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
@@ -213,7 +216,10 @@
     <ClInclude Include="engine\renderer\vertex_index_array.h" />
     <ClInclude Include="framework\factory.h" />
     <ClInclude Include="framework\object_manager.h" />
+    <ClInclude Include="game\bump_scene.h" />
+    <ClInclude Include="game\fx_scene.h" />
     <ClInclude Include="game\light_scene.h" />
+    <ClInclude Include="game\multi_light_scene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag" />
@@ -231,6 +237,8 @@
     <None Include="builds\content\shaders\texture_phong_fx.frag" />
     <None Include="builds\content\shaders\texture_phong_fx.vert" />
     <None Include="builds\content\shaders\texture_phong_light.frag" />
+    <None Include="builds\content\shaders\texture_phong_lights.frag" />
+    <None Include="builds\content\shaders\texture_phong_normal.frag" />
     <None Include="builds\content\shaders\texture_phong_specular.frag" />
     <None Include="builds\content\shaders\texture_unlit.frag" />
     <None Include="builds\content\shaders\texture_unlit.vert" />

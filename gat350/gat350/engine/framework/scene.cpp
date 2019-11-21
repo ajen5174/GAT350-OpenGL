@@ -4,7 +4,7 @@ void Scene::Update()
 {
 	for (const auto& actor : m_actors)
 	{
-		actor->Update();
+		if(actor->m_active) actor->Update();
 	}
 }
 
@@ -12,6 +12,6 @@ void Scene::Draw()
 {
 	for (const auto& actor : m_actors)
 	{
-		actor->Draw();
+		if(actor->m_active) actor->Draw();
 	}
 }

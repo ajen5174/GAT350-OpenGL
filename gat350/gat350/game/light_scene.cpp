@@ -69,13 +69,6 @@ bool LightScene::Create(const Name& name)
 
 #endif // _DEBUG
 
-	//material = m_engine->Factory()->Create<Material>(Material::GetClassName());
-	//material->m_name = "material";
-	//material->m_engine = m_engine;
-	//material->ambient = glm::vec3(1.0f);
-	//material->diffuse = glm::vec3(0.8f, 0.8f, 0.8f);
-	//material->specular = glm::vec3(1.0f);
-	//material->shininess = 128.0f;
 
 	// scene actors
 

@@ -145,6 +145,15 @@
     <ClCompile Include="..\external\imgui\imGuIZMO.quat\imGuIZMOquat.cpp">
       <Filter>external</Filter>
     </ClCompile>
+    <ClCompile Include="game\multi_light_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\fx_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\bump_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h">
@@ -273,6 +282,15 @@
     <ClInclude Include="engine\editor\editor.h">
       <Filter>source\engine\editor</Filter>
     </ClInclude>
+    <ClInclude Include="game\multi_light_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\fx_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\bump_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag">
@@ -330,6 +348,12 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="builds\content\shaders\texture_phong_light.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_normal.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\texture_phong_lights.frag">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>

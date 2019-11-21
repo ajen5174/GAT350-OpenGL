@@ -25,6 +25,11 @@ void Material::Edit()
 
 void Material::Use()
 {
+	(blend == TRANSPARENT || blend == ADDITIVE) ? glEnable(GL_BLEND) : glDisable(GL_BLEND);
+	if (blend == TRANSPARENT) glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);// source is the current fragment being rendered, the destination is what has already been rendered (behind that fragment)
+	else if (blend == ADDITIVE) glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+
+
 	for (const auto& texture : textures)
 	{
 		texture->Bind();

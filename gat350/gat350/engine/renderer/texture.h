@@ -14,7 +14,7 @@ public:
 
 	static u8* LoadImage(const std::string& filename, int& width, int& height, int& components);
 
-protected:
+public:
 	GLenum m_type = GL_TEXTURE_2D;
 	GLuint m_unit = GL_TEXTURE0;
 	GLuint m_texture = 0;
