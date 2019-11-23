@@ -17,7 +17,7 @@ bool BumpScene::Create(const Name& name)
 	auto shader = m_engine->Factory()->Create<Program>(Program::GetClassName());
 	shader->m_name = "shader";
 	shader->m_engine = m_engine;
-	shader->CreateShaderFromFile("shaders/texture_phong.vert", GL_VERTEX_SHADER);
+	shader->CreateShaderFromFile("shaders/texture_phong_normal.vert", GL_VERTEX_SHADER);
 	shader->CreateShaderFromFile("shaders/texture_phong_normal.frag", GL_FRAGMENT_SHADER);
 	shader->Link();
 	m_engine->Resources()->Add("phong_shader", std::move(shader));
@@ -48,17 +48,17 @@ bool BumpScene::Create(const Name& name)
 	material->m_engine = m_engine;
 	material->ambient = glm::vec3(1.0f);
 	material->diffuse = glm::vec3(0.8f, 0.8f, 0.8f);
-	material->specular = glm::vec3(0.0f);
-	material->shininess = 8.0f;
+	material->specular = glm::vec3(1.0f);
+	material->shininess = 128.0f;
 
 	// texture
 	{
-		auto texture = m_engine->Resources()->Get<Texture>("textures/rocks.jpg");
+		auto texture = m_engine->Resources()->Get<Texture>("textures/ogre_diffuse.bmp");
 		material->textures.push_back(texture);
 	}
 
 	{
-		auto texture = m_engine->Resources()->Get<Texture>("textures/rocks_normal.jpg");
+		auto texture = m_engine->Resources()->Get<Texture>("textures/ogre_normal.bmp");
 		texture->m_unit = GL_TEXTURE1;
 		material->textures.push_back(texture);
 	}
@@ -88,21 +88,21 @@ bool BumpScene::Create(const Name& name)
 	model->m_scene = this;
 	model->m_transform.translation = glm::vec3(0);
 	model->m_transform.scale = glm::vec3(1.0f);
-	model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/quad.obj");
+	model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/ogre.obj");
 	model->m_mesh->m_material = m_engine->Resources()->Get<Material>("material");
 	model->m_shader = m_engine->Resources()->Get<Program>("phong_shader");
 	Add(std::move(model));
 
-	model = m_engine->Factory()->Create<Model>(Model::GetClassName());
-	model->m_name = "model2";
-	model->m_engine = m_engine;
-	model->m_scene = this;
-	model->m_transform.translation = glm::vec3(0, -2, 0);
-	model->m_transform.scale = glm::vec3(10);
-	model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/plane.obj");
-	model->m_mesh->m_material = m_engine->Resources()->Get<Material>("material");
-	model->m_shader = m_engine->Resources()->Get<Program>("phong_shader");
-	Add(std::move(model));
+	//model = m_engine->Factory()->Create<Model>(Model::GetClassName());
+	//model->m_name = "model2";
+	//model->m_engine = m_engine;
+	//model->m_scene = this;
+	//model->m_transform.translation = glm::vec3(0, -2, 0);
+	//model->m_transform.scale = glm::vec3(10);
+	//model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/plane.obj");
+	//model->m_mesh->m_material = m_engine->Resources()->Get<Material>("material");
+	//model->m_shader = m_engine->Resources()->Get<Program>("phong_shader");
+	//Add(std::move(model));
 
 	// light
 	auto light = m_engine->Factory()->Create<Light>(Light::GetClassName());
@@ -115,7 +115,7 @@ bool BumpScene::Create(const Name& name)
 	light->ambient = glm::vec3(0.3f);
 	light->diffuse = glm::vec3(1);
 	light->specular = glm::vec3(1.0f);
-	light->exponent = 64.0f;
+	light->exponent = 128.0f;
 	Add(std::move(light));
 
 	// camera

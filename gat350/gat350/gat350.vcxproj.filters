@@ -356,5 +356,8 @@
     <None Include="builds\content\shaders\texture_phong_lights.frag">
       <Filter>shaders</Filter>
     </None>
+    <None Include="builds\content\shaders\texture_phong_normal.vert">
+      <Filter>shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

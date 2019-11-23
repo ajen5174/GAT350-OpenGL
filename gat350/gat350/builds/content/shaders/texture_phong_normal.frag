@@ -7,6 +7,7 @@
 in vec3 fposition;
 in vec3 fnormal;
 in vec2 ftexcoord;
+in mat3 ftbn_matrix;
 
 out vec4 color;
 
@@ -81,12 +82,13 @@ void phong(light_s in_light, vec3 position, vec3 normal, out vec3 ambient, out v
 
 void main()
 {
-	vec3 normal = texture(normal_sample, ftexcoord).rgb;
-	normal = (normal * 2.0) - 1.0;
-
 	vec3 ambient;
 	vec3 diffuse;
 	vec3 specular;
+
+	vec3 normal = texture(normal_sample, ftexcoord).rgb;
+	normal = (normal * 2.0) - 1.0;
+	normal = ftbn_matrix * normal;
 
 	phong(light, fposition, normal, ambient, diffuse, specular);
 

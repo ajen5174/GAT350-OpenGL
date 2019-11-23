@@ -52,7 +52,7 @@ bool LightScene::Create(const Name& name)
 	material->shininess = 128.0f;
 
 	// texture
-	auto texture = m_engine->Resources()->Get<Texture>("textures/uvgrid.jpg");
+	auto texture = m_engine->Resources()->Get<Texture>("textures/ogre_diffuse.bmp");
 	material->textures.push_back(texture);
 	m_engine->Resources()->Add("material", std::move(material));
 
@@ -79,7 +79,7 @@ bool LightScene::Create(const Name& name)
 	model->m_scene = this;
 	model->m_transform.translation = glm::vec3(0);
 	model->m_transform.scale = glm::vec3(1.0f);
-	model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/suzanne.obj");
+	model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/ogre.obj");
 	model->m_mesh->m_material = m_engine->Resources()->Get<Material>("material");
 	model->m_shader = m_engine->Resources()->Get<Program>("phong_shader");
 	Add(std::move(model));
