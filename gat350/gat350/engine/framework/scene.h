@@ -30,6 +30,33 @@ public:
 	}
 
 	template<typename T>
+	void SetActive(const Name& name)
+	{
+		for (auto& actor : m_actors)
+		{
+			if (dynamic_cast<T*>(actor.get()))
+			{
+				actor->m_active = (actor->m_name == name);
+			}
+		}
+
+	}
+
+	template<typename T>
+	T* GetActive()
+	{
+		for (auto& actor : m_actors)
+		{
+			if(actor->m_active && dynamic_cast<T*>(actor.get()))
+			{
+				return dynamic_cast<T*>(actor.get());
+			}
+		}
+
+		return nullptr;
+	}
+
+	template<typename T>
 	std::vector<T*> Get()
 	{
 		std::vector<T*> actors;

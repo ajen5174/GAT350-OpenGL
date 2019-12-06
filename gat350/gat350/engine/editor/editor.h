@@ -14,7 +14,7 @@ public:
 	void UpdateGUI();
 
 public:
-	bool m_visible = true;
+	bool m_visible = false;
 	class Scene* m_scene = nullptr;
 	class Actor* m_actor = nullptr;
 };

@@ -15,6 +15,7 @@ public:
 	glm::mat4 m_view_matrix;
 	glm::mat4 m_projection_matrix;
 
+	bool m_user_camera = true;
 	float fov;
 	float aspect_ratio;
 	float near_clip;

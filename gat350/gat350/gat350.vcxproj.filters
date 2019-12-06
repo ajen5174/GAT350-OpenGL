@@ -154,6 +154,18 @@
     <ClCompile Include="game\bump_scene.cpp">
       <Filter>source\game</Filter>
     </ClCompile>
+    <ClCompile Include="game\cubemap_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\framebuffer_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\renderer\framebuffer.cpp">
+      <Filter>source\engine\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="game\shadowmap_scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h">
@@ -291,6 +303,18 @@
     <ClInclude Include="game\bump_scene.h">
       <Filter>source\game</Filter>
     </ClInclude>
+    <ClInclude Include="game\cubemap_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\framebuffer_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\renderer\framebuffer.h">
+      <Filter>source\engine\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="game\shadowmap_scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag">
@@ -357,6 +381,24 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="builds\content\shaders\texture_phong_normal.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\skybox.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\skybox.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\reflection.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\reflection.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\depth_debug.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="builds\content\shaders\depth_debug.vert">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>

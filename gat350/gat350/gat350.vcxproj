@@ -158,6 +158,7 @@
     <ClCompile Include="engine\math\math.cpp" />
     <ClCompile Include="engine\math\transform.cpp" />
     <ClCompile Include="engine\renderer\camera.cpp" />
+    <ClCompile Include="engine\renderer\framebuffer.cpp" />
     <ClCompile Include="engine\renderer\gui.cpp" />
     <ClCompile Include="engine\renderer\light.cpp" />
     <ClCompile Include="engine\renderer\material.cpp" />
@@ -169,10 +170,13 @@
     <ClCompile Include="engine\renderer\vertex_array.cpp" />
     <ClCompile Include="engine\renderer\vertex_index_array.cpp" />
     <ClCompile Include="game\bump_scene.cpp" />
+    <ClCompile Include="game\cubemap_scene.cpp" />
+    <ClCompile Include="game\framebuffer_scene.cpp" />
     <ClCompile Include="game\fx_scene.cpp" />
     <ClCompile Include="game\light_scene.cpp" />
     <ClCompile Include="game\main.cpp" />
     <ClCompile Include="game\multi_light_scene.cpp" />
+    <ClCompile Include="game\shadowmap_scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
@@ -204,6 +208,7 @@
     <ClInclude Include="engine\math\math.h" />
     <ClInclude Include="engine\math\transform.h" />
     <ClInclude Include="engine\renderer\camera.h" />
+    <ClInclude Include="engine\renderer\framebuffer.h" />
     <ClInclude Include="engine\renderer\gui.h" />
     <ClInclude Include="engine\renderer\light.h" />
     <ClInclude Include="engine\renderer\material.h" />
@@ -217,9 +222,12 @@
     <ClInclude Include="framework\factory.h" />
     <ClInclude Include="framework\object_manager.h" />
     <ClInclude Include="game\bump_scene.h" />
+    <ClInclude Include="game\cubemap_scene.h" />
+    <ClInclude Include="game\framebuffer_scene.h" />
     <ClInclude Include="game\fx_scene.h" />
     <ClInclude Include="game\light_scene.h" />
     <ClInclude Include="game\multi_light_scene.h" />
+    <ClInclude Include="game\shadowmap_scene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="builds\content\shaders\basic.frag" />
@@ -227,10 +235,16 @@
     <None Include="builds\content\shaders\basic_color.vert" />
     <None Include="builds\content\shaders\basic_lit.frag" />
     <None Include="builds\content\shaders\basic_lit.vert" />
+    <None Include="builds\content\shaders\depth_debug.frag" />
+    <None Include="builds\content\shaders\depth_debug.vert" />
     <None Include="builds\content\shaders\gouraud.frag" />
     <None Include="builds\content\shaders\gouraud.vert" />
     <None Include="builds\content\shaders\phong.frag" />
     <None Include="builds\content\shaders\phong.vert" />
+    <None Include="builds\content\shaders\reflection.frag" />
+    <None Include="builds\content\shaders\reflection.vert" />
+    <None Include="builds\content\shaders\skybox.frag" />
+    <None Include="builds\content\shaders\skybox.vert" />
     <None Include="builds\content\shaders\texture_phong.frag" />
     <None Include="builds\content\shaders\texture_phong.vert" />
     <None Include="builds\content\shaders\texture_phong_fog.frag" />

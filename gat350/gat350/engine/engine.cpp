@@ -6,6 +6,7 @@
 #include "renderer/vertex_index_array.h"
 #include "renderer/texture.h"
 #include "renderer/material.h"
+#include "renderer/framebuffer.h"
 #include "renderer/light.h"
 #include "renderer/mesh.h"
 #include "renderer/model.h"
@@ -49,6 +50,7 @@ bool Engine::Initialize()
 	m_factory->Register(Material::GetClassName(), new Creator<Material, Object>());
 	m_factory->Register(Camera::GetClassName(), new Creator<Camera, Object>());
 	m_factory->Register(Light::GetClassName(), new Creator<Light, Object>());
+	m_factory->Register(Framebuffer::GetClassName(), new Creator<Framebuffer, Object>());
 
 	// resources
 	m_resources = std::make_unique<resource_manager_t>();

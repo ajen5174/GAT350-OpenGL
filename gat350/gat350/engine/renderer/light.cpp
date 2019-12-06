@@ -12,7 +12,7 @@ bool Light::Create(const Name& name)
 	m_debug_model->m_engine = m_engine;
 	m_debug_model->m_scene = m_scene;
 	m_debug_model->m_transform.scale = glm::vec3(0.15f, 0.15f, 0.15f);
-	m_debug_model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/cube.obj");
+	m_debug_model->m_mesh = m_engine->Resources()->Get<Mesh>("meshes/debug_cube.obj");
 	m_debug_model->m_mesh->m_material = m_engine->Resources()->Get<Material>("debug_material");
 	m_debug_model->m_shader = m_engine->Resources()->Get<Program>("debug_shader");
 #endif // _DEBUG
